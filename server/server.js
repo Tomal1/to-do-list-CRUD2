@@ -1,18 +1,17 @@
 const express = require("express");
 
-const PORT = process.env.PORT || 3001;
-
 //npm i dotenv
 require("dotenv").config();
 //npm i cors (gives permision for front end to access backend)
 const cors = require("cors");
 
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 app.use(
   cors({
     // this is needed in express server to give permission
-    origin: "http://127.0.0.1:5501",
+    origin: "http://127.0.0.1:5500",
   })
 );
 

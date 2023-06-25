@@ -1,0 +1,5 @@
+DB_NAME="put your database name"
+DB_USER="put your root"
+DB_PASSWORD="put your password"
+DB_HOST="put your host"
+PORT="port number hear"
