@@ -81,11 +81,18 @@ h1 {
   font-size: 20px;
 }
 
-.Edit-styling{
-  background-color: black;
+.Edit-styling {
+  background: none;
   border: var(--border);
   border-radius: 15px;
-  color: white;
+  color: var(--color-of-everything);
   height: 45px;
   margin:0px 2.5px 0px 2.5px
+}
+
+.Edit-styling:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
 }
