@@ -80,3 +80,12 @@ h1 {
   height: 40px;
   font-size: 20px;
 }
+
+.Edit-styling{
+  background-color: black;
+  border: var(--border);
+  border-radius: 15px;
+  color: white;
+  height: 45px;
+  margin:0px 2.5px 0px 2.5px
+}

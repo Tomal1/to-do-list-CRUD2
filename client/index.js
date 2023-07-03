@@ -5,7 +5,6 @@ const inputField = document.querySelector("#inputField");
 const refreshPage = () => window.location.reload();
 
 const start = () => {
-  
   fetch("http://localhost:3001")
     .then((res) => res.json())
     .then((data) => {
@@ -39,7 +38,7 @@ const start = () => {
             const Delete = document.createElement("input");
             Delete.type = "submit";
             Delete.value = "Delete";
-            Edit.classList.add("Edit-styling");
+            Delete.classList.add("Edit-styling");
             paragraph.appendChild(Delete);
 
             Edit.addEventListener("click", () => {
@@ -53,7 +52,7 @@ const start = () => {
               })
                 .then((res) => res.json())
                 .then(console.log("edited successfully"));
-                refreshPage();
+              refreshPage();
             });
 
             Delete.addEventListener("click", () => {
@@ -67,10 +66,8 @@ const start = () => {
                 .then((res) => res.json())
                 .then((data) => console.log(data));
               refreshPage();
-            })
+            });
           }
-
-
         });
       }
       inputField.value = "";
