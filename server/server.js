@@ -10,8 +10,8 @@ const PORT = process.env.PORT;
 
 app.use(
   cors({
-    // this is needed in express server to give permission
-    origin: "localhost:5500",
+    // this is needed in express server to give permission (http://127.0.0.1:5500)
+    origin: "http://127.0.0.1:5500",
   })
 );
 
