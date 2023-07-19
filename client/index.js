@@ -7,7 +7,7 @@ const refreshPage = () => window.location.reload();
 const url = "https://to-do-list-backend-lidw.onrender.com";
 
 const start = () => {
-  fetch(`${url}`)
+  fetch(url)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
