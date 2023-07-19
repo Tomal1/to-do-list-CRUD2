@@ -9,10 +9,10 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(
-  cors({
+  cors(
     // this is needed in express server to give permission (http://127.0.0.1:5500)
-    origin: "http://127.0.0.1:5500",
-  })
+    
+  )
 );
 
 app.use(express.urlencoded({ extended: true }));

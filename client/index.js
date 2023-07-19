@@ -4,8 +4,10 @@ const inputField = document.querySelector("#inputField");
 
 const refreshPage = () => window.location.reload();
 
+const url = "http://localhost:3001";
+
 const start = () => {
-  fetch("http://localhost:3001")
+  fetch(`${url}`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
@@ -42,7 +44,7 @@ const start = () => {
             paragraph.appendChild(Delete);
 
             Edit.addEventListener("click", () => {
-              fetch("http://localhost:3001/update", {
+              fetch(`${url}/update`, {
                 method: "PUT",
                 headers: { "Content-type": "application/json" },
                 body: JSON.stringify({
@@ -56,7 +58,7 @@ const start = () => {
             });
 
             Delete.addEventListener("click", () => {
-              fetch("http://localhost:3001/delete", {
+              fetch(`${url}/delete`, {
                 method: "DELETE",
                 headers: { "Content-type": "application/json" },
                 body: JSON.stringify({
@@ -80,7 +82,7 @@ addToDo.addEventListener("click", () => {
     alert("Input field cant be left empty");
   } else {
     console.log(inputField.value); //displays what you are typing in to the input field
-    fetch("http://localhost:3001/post", {
+    fetch(`${url}/post`, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ toDos: inputField.value }),
