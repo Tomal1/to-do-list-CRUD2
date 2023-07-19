@@ -10,10 +10,12 @@ const PORT = process.env.PORT;
 
 app.use(
   cors({
-    // this is needed in express server to give permission origin: "http://127.0.0.1:5500",
+    // this is needed in express server to give permission origin: "http://127.0.0.1:5500" when using local machine,
     origin:"*",
   })
 );
+
+app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
 // express by default dose not use json, this allow it
@@ -81,8 +83,6 @@ app.delete("/delete", (req, res) => {
     }
   });
 });
-
-app.use(express.static("public"));
 
 app.listen(PORT, () =>{
     console.log(`listning to port ${PORT}`);
