@@ -10,8 +10,7 @@ const PORT = process.env.PORT;
 
 app.use(
   cors(
-    // this is needed in express server to give permission (http://127.0.0.1:5500)
-    
+    // this is needed in express server to give permission origin: "http://127.0.0.1:5500",
   )
 );
 
@@ -22,6 +21,10 @@ app.use(express.json());
 const db = require("./config/connection");
 
 app.get("/", (req, res) => {
+
+  res.setHeader("Access-Control-Allow-Credentials","true");
+  res.send("API is running...");
+
   const sql = "SELECT * FROM input";
 
   db.query(sql, (err, data) => {

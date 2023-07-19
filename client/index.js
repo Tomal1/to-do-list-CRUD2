@@ -4,7 +4,7 @@ const inputField = document.querySelector("#inputField");
 
 const refreshPage = () => window.location.reload();
 
-const url = "http://localhost:3001";
+const url = "https://to-do-list-backend-lidw.onrender.com";
 
 const start = () => {
   fetch(`${url}`)
